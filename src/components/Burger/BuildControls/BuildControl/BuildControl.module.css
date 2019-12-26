@@ -11,7 +11,8 @@
     padding: 5px;
     margin: 0 5px;
     border: 1px solid #aa6817;
-  }
+    margin: 0 auto;
+}
   
   .BuildControl button:disabled {
       background-color: #AC9980;

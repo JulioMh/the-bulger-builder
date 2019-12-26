@@ -96,7 +96,7 @@ class BurgerBuilder extends React.Component {
             disableInfo[key] = disableInfo[key] <= 0;
         }
         return (
-            <Aux>)
+            <Aux>
                 <Modal show={this.state.purchasing} modalClose={this.purchaseCloseHandler}>
                     <OrderSummary 
                         cancel={this.purchaseCloseHandler}
