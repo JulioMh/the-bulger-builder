@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import NavigationItem from './NavigationItem/NavigationItem';
 import styles from './navigationItems.module.css';
 
@@ -13,6 +13,6 @@ const navigationItems = () => (
         </NavigationItem>
         
     </ul>
-)
+);
 
 export default navigationItems;

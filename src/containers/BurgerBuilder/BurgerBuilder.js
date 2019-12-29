@@ -1,9 +1,9 @@
-import React from 'react'
-import Aux from '../../hoc/Aux'
-import Burger from '../../components/Burger/Burger'
-import BuildControls from '../../components/Burger/BuildControls/BuildControls'
-import Modal from '../../components/UI/Modal/Modal'
-import OrderSummary from '../../components/Burger/OrderSummary/OrderSummary'
+import React from 'react';
+import Aux from '../../hoc/Aux';
+import Burger from '../../components/Burger/Burger';
+import BuildControls from '../../components/Burger/BuildControls/BuildControls';
+import Modal from '../../components/UI/Modal/Modal';
+import OrderSummary from '../../components/Burger/OrderSummary/OrderSummary';
 
 const INGREDIENT_PRICES = {
     lettuce: 0.5,
@@ -13,7 +13,7 @@ const INGREDIENT_PRICES = {
     onion: 0.5,
     tomato: 0.7,
     pickle: 0.25,
-}
+};
 
 class BurgerBuilder extends React.Component {
 
@@ -30,8 +30,7 @@ class BurgerBuilder extends React.Component {
         totalPrice: 4,
         purchasable: false,
         purchasing: false
-
-    }
+    };
 
     updatePurchaseState(updatedIngredients) {
         const ingredients = {
@@ -45,7 +44,7 @@ class BurgerBuilder extends React.Component {
                 return sum + el;
             }, 0);
         this.setState({ purchasable: sum > 0 });
-    }
+    };
 
     addIngredientHandler = (type) => {
         const oldCount = this.state.ingredients[type];
@@ -59,14 +58,14 @@ class BurgerBuilder extends React.Component {
         const newPrice = oldPrice + priceAddition;
         this.setState({ totalPrice: newPrice, ingredients: updatedIngredients });
         this.updatePurchaseState(updatedIngredients);
-    }
+    };
 
     removeIngredientHandler = (type) => {
         const oldCount = this.state.ingredients[type];
         if (oldCount === 0) {
             alert("You should add that ingredient before remove it");
             return;
-        }
+        };
         const updatedCount = oldCount - 1;
         const updatedIngredients = {
             ...this.state.ingredients
@@ -75,17 +74,17 @@ class BurgerBuilder extends React.Component {
         const newPrice = this.state.totalPrice - INGREDIENT_PRICES[type];
         this.setState({ totalPrice: newPrice, ingredients: updatedIngredients });
         this.updatePurchaseState(updatedIngredients);
-    }
+    };
 
     purchaseHandler = () => {
         this.setState({ purchasing: true });
-    }
+    };
     purchaseCloseHandler = () => {
         this.setState({ purchasing: false });
-    }
+    };
     purchaseContinueHandler = () => {
         this.purchaseCloseHandler();
-        alert('You purchased a delicius burger!');
+        alert('You purchased a delicious burger!');
     };
 
     render() {
@@ -115,7 +114,7 @@ class BurgerBuilder extends React.Component {
                 />
             </Aux>
         );
-    }
-}
+    };
+};
 
 export default BurgerBuilder;

@@ -1,6 +1,6 @@
 import React from 'react';
-import burgerLogo from '../../assets/images/logo.png'
-import styles from './Logo.module.css'
+import burgerLogo from '../../assets/images/logo.png';
+import styles from './Logo.module.css';
 
 const logo = (props) => (
     <div className={styles.Logo}>

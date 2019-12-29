@@ -127,26 +127,3 @@
     margin: 2% auto;
     border-radius: 20px;
 }
-
-.Pickles {
-    height: 3%;
-    width: 80%;
-    margin: auto;
-    position: relative;
-}
-
-.Pickle1 {
-    height: 60%;
-    width: 45%; 
-    background-color: green;
-    float: left;
-    border-radius: 25px;
-}
-
-.Pickle2 {
-    height: 60%;
-    width: 45%; 
-    background-color: green;
-    float: right;
-    border-radius: 25px;
-}

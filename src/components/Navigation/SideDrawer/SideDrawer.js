@@ -3,15 +3,16 @@ import Logo from '../../Logo/Logo';
 import NavigationItems from '../NavigationItems/NavigationItems';
 import styles from './SideDrawer.module.css';
 import BackDrop from '../../UI/Backdrop/Backdrop';
-import Aux from '../../../hoc/Aux'
+import Aux from '../../../hoc/Aux';
 
 
 const sideDraw = (props) => {
-    //...
+    let attachedClasses = [styles.SideDrawer, styles.Close];
+    if (props.open) attachedClasses = [styles.SideDrawer, styles.Open];
     return (
         <Aux>
-            <BackDrop/>
-            <div className={styles.SideDrawer}>
+            <BackDrop show={props.open} clicked={props.closed} />
+            <div className={attachedClasses.join(' ')}>
                 <div className={styles.Logo}>
                     <Logo />
                 </div>
